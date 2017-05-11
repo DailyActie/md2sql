@@ -13,5 +13,3 @@ MarkDown
 SQL
 ---
 .. autoclass:: MDtoSQL.base.SQL()
-
-
