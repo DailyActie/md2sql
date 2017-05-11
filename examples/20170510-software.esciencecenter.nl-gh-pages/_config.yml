@@ -1,0 +1,84 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: eScience Technology Platform
+email: estep@esciencecenter.nl
+description:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://software.esciencecenter.nl" # the base hostname & protocol for your site
+twitter_username: esciencecenter
+github_username: NLeSC
+json_excludes:
+- next
+- previous
+- output
+- path
+- layout
+- relative_path
+- content  # renamed to 'description'
+- url  # renamed to '@id'
+- collection
+- ext
+- draft
+- excerpt
+- tags
+- categories
+- date  # converted to iso8601 format
+
+# Build settings
+markdown: kramdown
+keep_files:
+- assets
+- images
+- schema
+- js
+permalink: pretty
+collections:
+  software:
+    output: false
+  project:
+    output: false
+  person:
+    output: false
+  organization:
+    output: false
+  publication:
+   output: false
+  report:
+    output: false
+defaults:
+  - scope:
+      path: ""
+      type: software
+    values:
+      schema: http://software.esciencecenter.nl/schema/software
+  - scope:
+      path: ""
+      type: project
+    values:
+      schema: http://software.esciencecenter.nl/schema/project
+  - scope:
+      path: ""
+      type: person
+    values:
+      schema: http://software.esciencecenter.nl/schema/person
+  - scope:
+      path: ""
+      type: organization
+    values:
+      schema: http://software.esciencecenter.nl/schema/organization
+  - scope:
+      path: ""
+      type: publication
+    values:
+      schema: http://software.esciencecenter.nl/schema/publication
+  - scope:
+      path: ""
+      type: report
+    values:
+      schema: http://software.esciencecenter.nl/schema/report
