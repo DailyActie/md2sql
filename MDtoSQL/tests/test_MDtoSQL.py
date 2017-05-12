@@ -25,6 +25,7 @@ import MDtoSQL
 
 import markdown as md
 
+
 # import codecs
 # input_file = codecs.open("w.vanhage.md", mode="r", encoding="utf-8")
 # text = input_file.read()

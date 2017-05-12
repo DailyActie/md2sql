@@ -20,13 +20,18 @@ __init__
 """
 
 
+from .SQL import *
+from .MD import *
+from .ePlatform import ePlatform
+from .MDtoSQL import MDtoSQL
+
+
 __author__ = "Quan Pan"
 __version__ = "0.1"
 __revision__ = "0.1.1"
-
-from .SQL import *
-from .MDtoSQL import MDtoSQL
 __all__ = [
+    'SQL',
+    'MD',
     'MDtoSQL',
-    'SQL'
+    'ePlatform'
 ]

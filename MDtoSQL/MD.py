@@ -20,6 +20,9 @@ MD
 """
 
 
+import markdown as md
+
+
 class MD(object):
     """MD
     """
