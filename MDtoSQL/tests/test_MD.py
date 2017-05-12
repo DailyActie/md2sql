@@ -16,12 +16,12 @@
 
 
 """
-test_MDtoSQL
+test_MD
 """
 
 
 import sys
 sys.path.append('..')
-import MDtoSQL
+import MD
 
 print "End"

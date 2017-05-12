@@ -20,7 +20,7 @@ MD
 """
 
 
-import markdown as md
+import markdown
 
 
 class MD(object):
@@ -30,5 +30,19 @@ class MD(object):
     def __init__(self):
         # super(MD, self).__init__()
 
-        self.m = 0
+        self.md = markdown
 
+    def toHTML(self):
+        """
+        Description
+        :param arg:
+        :return:
+
+        """
+        # import codecs
+        # input_file = codecs.open("w.vanhage.md", mode="r", encoding="utf-8")
+        # text = input_file.read()
+        # html = self.md.markdown(text)
+
+        self.md.markdownFromFile(input="data_md/person-template.md",output="data_md/person.html",encoding="utf-8")
+        self.md.markdownFromFile(input="data_md/w.vanhage.md",output="data_md/w.vanhage.html",encoding="utf-8")
