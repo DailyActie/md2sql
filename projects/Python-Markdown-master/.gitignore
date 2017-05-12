@@ -1,0 +1,17 @@
+.DS*
+*.pyc
+*.bak
+*.swp
+test-output.html
+build/*
+dist/*
+tmp/*
+MANIFEST
+.venv
+*~
+*#*
+.tox/*
+.coverage
+htmlcov/*
+*komodo*
+Markdown.egg-info/*
