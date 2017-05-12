@@ -30,6 +30,6 @@ import markdown as md
 # text = input_file.read()
 # html = md.markdown(text)
 
-md.markdownFromFile(input="md/person-template.md",output="md/person.html",encoding="utf-8")
-md.markdownFromFile(input="md/w.vanhage.md",output="md/w.vanhage.html",encoding="utf-8")
+md.markdownFromFile(input="data_md/person-template.md",output="data_md/person.html",encoding="utf-8")
+md.markdownFromFile(input="data_md/w.vanhage.md",output="data_md/w.vanhage.html",encoding="utf-8")
 print "End"
