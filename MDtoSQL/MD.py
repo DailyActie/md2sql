@@ -16,17 +16,16 @@
 
 
 """
-__init__
+MD
 """
 
 
-__author__ = "Quan Pan"
-__version__ = "0.1"
-__revision__ = "0.1.1"
+class MD(object):
+    """MD
+    """
 
-from .SQL import *
-from .MDtoSQL import MDtoSQL
-__all__ = [
-    'MDtoSQL',
-    'SQL'
-]
+    def __init__(self):
+        # super(MD, self).__init__()
+
+        self.m = 0
+

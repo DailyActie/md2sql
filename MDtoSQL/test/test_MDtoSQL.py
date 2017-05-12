@@ -16,17 +16,20 @@
 
 
 """
-__init__
+test_MDtoSQL
 """
 
+import sys
+sys.path.append('..')
+import MDtoSQL
 
-__author__ = "Quan Pan"
-__version__ = "0.1"
-__revision__ = "0.1.1"
+import markdown as md
 
-from .SQL import *
-from .MDtoSQL import MDtoSQL
-__all__ = [
-    'MDtoSQL',
-    'SQL'
-]
+# import codecs
+# input_file = codecs.open("w.vanhage.md", mode="r", encoding="utf-8")
+# text = input_file.read()
+# html = md.markdown(text)
+
+md.markdownFromFile(input="md/person-template.md",output="md/person.html",encoding="utf-8")
+md.markdownFromFile(input="md/w.vanhage.md",output="md/w.vanhage.html",encoding="utf-8")
+print "End"
