@@ -4,12 +4,12 @@ sudo composer create-project laravel/laravel controlcentro.com --prefer-dist
 sudo chmod -R 777 controlcentro.com
 cd controlcentro.com
 
-php artisan app:name DailyActie
+php artisan app:name ControlCentro
 
     // .env
     APP_ENV=local
     APP_DEBUG=true
-    APP_KEY=base64:QD6fndQc7+laDoMLT6/N0VK1BCVACq5NwzVXeyrxlyk=
+    APP_KEY=base64:ZjL1UwpwxWgu7/hfhb10HznPhJ+ph5hvlF3hDKw11UA=
     APP_URL=http://controlcentro.com
 
     DB_CONNECTION=mysql
