@@ -1,8 +1,8 @@
 ==== create laravel project ====
 cd /var/www/
-sudo composer create-project laravel/laravel dailyactie.com --prefer-dist
-sudo chmod -R 777 dailyactie.com
-cd dailyactie.com
+sudo composer create-project laravel/laravel controlcentro.com --prefer-dist
+sudo chmod -R 777 controlcentro.com
+cd controlcentro.com
 
 php artisan app:name DailyActie
 
@@ -10,38 +10,38 @@ php artisan app:name DailyActie
     APP_ENV=local
     APP_DEBUG=true
     APP_KEY=base64:QD6fndQc7+laDoMLT6/N0VK1BCVACq5NwzVXeyrxlyk=
-    APP_URL=http://dailyactie.com
+    APP_URL=http://controlcentro.com
 
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=dailyactie
+    DB_DATABASE=controlcentro
     DB_USERNAME=root
     DB_PASSWORD=jukmem31
 
 
 ==== https://laravel.com/docs/5.2/elixir ====
     // for gulp.js notification
-pan4@dssfactory:/var/www/dailyactie.com$ sudo apt-get install libnotify-bin
+pan4@dssfactory:/var/www/controlcentro.com$ sudo apt-get install libnotify-bin
     // check node.js
-pan4@dssfactory:/var/www/dailyactie.com$ node -v
+pan4@dssfactory:/var/www/controlcentro.com$ node -v
     // gulp command
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm install --global gulp-cli
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm install --global gulp-cli
     // npm 
     //  "devDependencies": {
     //    "gulp": "^3.9.1",
     //    "laravel-elixir": "^5.0.0",
     //    "bootstrap-sass": "^3.0.0"
     //  }
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm install
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm install
 
     // for Browserify.js
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm install babel-preset-es2015 --save-dev
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm install babel-preset-react --save-dev
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm install babel-preset-es2015 --save-dev
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm install babel-preset-react --save-dev
 
     // for bootstrap 3.3.6
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm install jquery@1.11.3 --save-dev
-pan4@dssfactory:/var/www/dailyactie.com$ sudo npm isntall font-awesome --save-dev
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm install jquery@1.11.3 --save-dev
+pan4@dssfactory:/var/www/controlcentro.com$ sudo npm isntall font-awesome --save-dev
 
     // uncomment ./resources/assets/sass/app.scss => bootstrap.sass
     @import url(https://fonts.googleapis.com/css?family=Lato);
@@ -50,12 +50,12 @@ pan4@dssfactory:/var/www/dailyactie.com$ sudo npm isntall font-awesome --save-de
     @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
     
     // create app.css
-pan4@dssfactory:/var/www/dailyactie.com$ mkdir ./resources/assets/css
-pan4@dssfactory:/var/www/dailyactie.com$ vim ./resources/assets/css/app.css
+pan4@dssfactory:/var/www/controlcentro.com$ mkdir ./resources/assets/css
+pan4@dssfactory:/var/www/controlcentro.com$ vim ./resources/assets/css/app.css
 
     // create app.js
-pan4@dssfactory:/var/www/dailyactie.com$ mkdir ./resources/assets/js
-pan4@dssfactory:/var/www/dailyactie.com$ vim ./resources/assets/js/app.js
+pan4@dssfactory:/var/www/controlcentro.com$ mkdir ./resources/assets/js
+pan4@dssfactory:/var/www/controlcentro.com$ vim ./resources/assets/js/app.js
     window.$ = window.jQuery = require('jquery')
     require('bootstrap-sass');
     $( document ).ready(function() {
@@ -100,21 +100,21 @@ pan4@dssfactory:/var/www/dailyactie.com$ vim ./resources/assets/js/app.js
 
         // css is copyed into public/assets/css
         mix.styles([
-            appPaths.styles+'/dailyactie.css',
+            appPaths.styles+'/controlcentro.css',
     //        appPaths.mermaid+'/mermaid.css',
     //        appPaths.openlayer+'/ol.css',
-        ], 'public/assets/css/dailyactie.min.css'); // ,'\./'
+        ], 'public/assets/css/controlcentro.min.css'); // ,'\./'
 
         // js is copyed into public/assets/js
         mix.scripts([
-            appPaths.scripts+'/dailyactie.js'
-        ], 'public/assets/js/dailyactie.min.js'); // ,'\./'
+            appPaths.scripts+'/controlcentro.js'
+        ], 'public/assets/js/controlcentro.min.js'); // ,'\./'
     });
     
     // Run all tasks...
-pan4@dssfactory:/var/www/dailyactie.com$ gulp
+pan4@dssfactory:/var/www/controlcentro.com$ gulp
     // Run all tasks and minify all CSS and JavaScript...
-pan4@dssfactory:/var/www/dailyactie.com$ gulp --production
+pan4@dssfactory:/var/www/controlcentro.com$ gulp --production
 
 
 === ratchet WampServer ===
@@ -149,12 +149,12 @@ pan4@dssfactory:~/php-ext/php-zmq$ sudo vim /etc/php5/cli/php.ini
 pan4@dssfactory:~/php-ext/php-zmq$ sudo service apache2 restart
 
     // Installing laravel-ratchet
-pan4@dssfactory:/var/www/dailyactie.com$ composer require askedio/laravel-ratchet
+pan4@dssfactory:/var/www/controlcentro.com$ composer require askedio/laravel-ratchet
 
 
 
 
-pan4@dssfactory:/var/www/dailyactie.com$ php artisan make:model Roles -m
+pan4@dssfactory:/var/www/controlcentro.com$ php artisan make:model Roles -m
 
 php artisan make:controller ProductsController --resource
 
@@ -169,7 +169,7 @@ php artisan make:seeder DealsTableSeeder
 php artisan make:migration create_deals_products_table --create=deals_products
 php artisan make:seeder DealsProductsTableSeeder
 
-vim /var/www/dailyactie.com/resources/views/tests/chat.blade.php 
+vim /var/www/controlcentro.com/resources/views/tests/chat.blade.php 
 :wq
 
 php artisan migrate --seed
