@@ -17,7 +17,7 @@ php artisan app:name ControlCentro
     DB_PORT=3306
     DB_DATABASE=controlcentro
     DB_USERNAME=root
-    DB_PASSWORD=
+    DB_PASSWORD=jukmem31
 
 
 ==== https://laravel.com/docs/5.2/elixir ====
