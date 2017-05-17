@@ -44,5 +44,5 @@ class MD(object):
         # text = input_file.read()
         # html = self.md.markdown(text)
 
-        self.md.markdownFromFile(input="data_md/person-template.md",output="data_md/person.html",encoding="utf-8")
-        self.md.markdownFromFile(input="data_md/w.vanhage.md",output="data_md/w.vanhage.html",encoding="utf-8")
+        self.md.markdownFromFile(input="data_md/schema/person-template.md",output="data_md/schema/person.html",encoding="utf-8")
+        self.md.markdownFromFile(input="data_md/person/w.vanhage.md",output="data_md/person/w.vanhage.html",encoding="utf-8")
